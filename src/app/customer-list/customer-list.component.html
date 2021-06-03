@@ -1,0 +1,32 @@
+<h1>Parent class</h1>
+
+<div>
+ <button (click)="onClickMe()">Click me!</button>
+    {{clickMessage}}`
+</div>
+
+
+<p>-----------------------------</p>
+<h4><u>Customer-list Detail!</u></h4>
+
+<table class='table'>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>CustomerName</th>
+        <th>City</th>
+        <th>mobileno</th>
+        <th>View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers;">
+        <td>{{customer.customerNo}}</td>
+        <td>{{customer.customername}}</td>
+        <td>{{customer.city}}</td>
+        <td>{{customer.mobileno}}</td>
+        <td><button (click)="showDetails(customer)">Update</button></td>
+      </tr>
+    </tbody>
+  </table>  
+<app-customer-detail [customer]="selectedCustomer" (customerChange)="update($event)"></app-customer-detail>

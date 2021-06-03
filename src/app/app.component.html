@@ -1,0 +1,22 @@
+<div>
+  <h1> {{title}}</h1>
+</div>
+
+
+<ul>
+  <!-- List of fruits From Array -->
+    <li *ngFor="let Fruits of Fruits">
+        <h2> {{Fruits.name}} </h2>
+    </li>
+</ul>
+
+<div>
+  <!-- It will do Increment & Decrement a number while clicking on button-->
+  <h1> Increment & Decrement value:</h1>
+  <p><Button (click)="plus()" class="btn"> + </Button></p>
+  <Button (click)="minus()" class="btn"> - </Button>
+  
+  <h2>Number Is: {{num1}}</h2>
+</div>
+
+<app-customer-list></app-customer-list>

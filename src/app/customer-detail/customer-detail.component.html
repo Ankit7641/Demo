@@ -1,0 +1,18 @@
+<h1>Child class</h1>
+
+<div>
+    <h4>It will count clicking on the button</h4>
+    <button (click)="onClickMe2($event)">No! .. Click me!</button>
+    {{clickMessage}}`
+</div>
+
+<h3><u>Customer-Detail List to view using EventEmitter </u></h3>
+
+<p>Customer No : {{customer.customerNo}}</p>
+<p> Customername : <input [(ngModel)]="customer.customername"> </p>
+<p> City : <input [(ngModel)]="customer.city"> </p>
+<p> MobileNo : <input [(ngModel)]="customer.mobileno"> </p>
+
+
+<button (click)="update()">Submit</button>
+
